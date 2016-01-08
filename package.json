@@ -1,0 +1,24 @@
+{
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "busboy": "^0.2.12",
+    "connect-busboy": "0.0.2"
+  },
+  "name": "ajaxfile",
+  "version": "0.0.0",
+  "description": "ERROR: No README data found!",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "multer": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
