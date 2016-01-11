@@ -14,6 +14,10 @@ app
     ;
 
 app.get('/', function (req, res) {
+    /**
+     * With "res.sendFile" you are able to render a simple "html" view.
+     * This way you can not pass variables.
+     */
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
