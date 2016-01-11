@@ -7,7 +7,7 @@
 <body>
     <fieldset>
         <legend>
-            Fájl feltöltés mindenkinek
+            File upload for everyone
         </legend>
         <form method="post" enctype="multipart/form-data">
             <p>
@@ -15,13 +15,24 @@
             </p>
             <p>
                 <button type="button" id="uploadButton">
-                    Feltöltés AJAX-al
+                    AJAX upload
                 </button>
             </p>
             <p>
                 <progress value="0" max="0"></progress>
             </p>
         </form>
+    </fieldset>
+    <fieldset>
+        <legend>
+            List of files
+        </legend>
+        <p>
+            To see the file list, switch to
+            <a href="/list_files">
+                "list_files"
+            </a>
+        </p>
     </fieldset>
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="/public/index.js"></script>

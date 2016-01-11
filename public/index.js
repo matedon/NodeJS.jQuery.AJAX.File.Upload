@@ -18,7 +18,7 @@
         });
         $.ajax({
             type: 'POST',
-            url: '/upload',
+            url: '/uploadFile',
             dataType: 'json',
             processData: false, // Dont process the files
             contentType: false, // Its a query string request
@@ -39,6 +39,7 @@
             data: fileFormData,
             success: function (res) {
                 alert('Upload done!');
+                window.location.reload(true);
             }
         });
     });
