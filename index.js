@@ -10,7 +10,7 @@ app
     .use('/public', express.static('public'))
     .use('/upload', express.static('upload'))
     .use(busboy())
-    .set('view engine', 'ejs')
+    .set('view engine', 'ejs') // node template engine
     ;
 
 app.get('/', function (req, res) {
