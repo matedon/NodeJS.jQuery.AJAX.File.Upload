@@ -21,7 +21,8 @@ app.post('/upload', function(req, res) {
             fileStream.pipe(writeStream);
             writeStream.on('close', function() {
                 console.log("Upload Finished of " + fileName);
-                res.sendStatus(200);
+                res.setHeader('Content-Type', 'application/json');
+                res.send(JSON.stringify({ success: true }));
             });
         });
         return req.pipe(req.busboy);

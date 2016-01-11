@@ -38,7 +38,7 @@
             },
             data: fileFormData,
             success: function (res) {
-
+                alert('Upload done!');
             }
         });
     });
