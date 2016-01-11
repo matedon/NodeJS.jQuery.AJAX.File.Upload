@@ -2,6 +2,7 @@
     var
         $form = $('form'),
         $uploadButton = $form.find('#uploadButton'),
+        $rename = $form.find('#rename'),
         $progress = $form.find('progress');
     $uploadButton.on('click', function () {
         var $button = $(this),
@@ -18,7 +19,9 @@
         });
         $.ajax({
             type: 'POST',
-            url: '/uploadFile',
+            url: '/uploadFile?' + $.param({
+                rename: $rename.val()
+            }),
             dataType: 'json',
             processData: false, // Dont process the files
             contentType: false, // Its a query string request

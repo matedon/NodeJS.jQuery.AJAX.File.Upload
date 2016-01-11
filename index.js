@@ -27,6 +27,9 @@ app.post('/uploadFile', function(req, res) {
              * Make secure filenames and place time tag.
              * @type {string}
              */
+            if (req.query.rename) {
+                fileName = req.query.rename;
+            }
             fileName = Number(new Date()) + '_' + fileName.replace(/[^a-z0-9.]/gi, '_');
             var writeStream = fs.createWriteStream(path.join(uploadDir, fileName));
             fileStream.pipe(writeStream);
