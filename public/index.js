@@ -41,8 +41,12 @@
             },
             data: fileFormData,
             success: function (res) {
-                alert('Upload done!');
-                window.location.reload(true);
+                if (res.success) {
+                    alert('Upload done!');
+                    window.location.reload(true);
+                } else {
+                    alert('Something went wrong!');
+                }
             }
         });
     });
