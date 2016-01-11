@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NodeJS File Upload</title>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            File upload for everyone
+        </legend>
+        <form method="post" enctype="multipart/form-data">
+            <p>
+                <input type="file" name="uploadFile" />
+            </p>
+            <p>
+                <button type="button" id="uploadButton">
+                    AJAX upload
+                </button>
+            </p>
+            <p>
+                <progress value="0" max="0"></progress>
+            </p>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend>
+            List of files
+        </legend>
+        <ul>
+            <% uploadFiles.forEach(function(file) { %>
+            <li>
+                <a href="<%= file.filePath %>" target="_blank">
+                    <%= file.fileName %>
+                </a>
+            </li>
+            <% }); %>
+        </ul>
+    </fieldset>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/public/index.js"></script>
+</body>
+</html>
